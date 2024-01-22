@@ -1,6 +1,14 @@
 <?php
 use Bank\App\App;
 use Bank\App\Services\Accounts;
+use Bank\App\Services\Message;
+
+if($balance > 0){
+    Message::set("You cannot delete account which has funds inside it." , 'error');
+    return App::redirect('acc');
+    die;
+}
+
 ?>
 
         <div class="workArea">

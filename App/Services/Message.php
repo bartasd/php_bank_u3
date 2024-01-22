@@ -10,7 +10,7 @@ class Message {
         return $_SESSION['data'] ?? null;
     }
     public static function reset(){
-        unset($_SESSION['data']);
+        $_SESSION['data'] = null;
     }
 
     private function __construct(){
