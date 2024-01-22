@@ -12,4 +12,8 @@ class Message {
     public static function reset(){
         unset($_SESSION['data']);
     }
+
+    private function __construct(){
+        
+    }
 }
