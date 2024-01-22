@@ -4,12 +4,6 @@ use Bank\App\Services\Accounts;
 ?>
 
         <div class="workArea">
-            <?php if($balance > 0): ?>
-            <div class="editCont deleteCont">
-                <p class="edit_title">You cannot delete account, which has positive account balance.</p>
-                <button type="button" class="submitBtn btn btn-secondary btn-lg"><a href="http://bank.meh:8080/acc/">Return</a></button>
-            </div>
-            <?php else: ?>
             <div class="editCont deleteCont">
                 <div>
                     <p class="edit_title">Are you sure to delete an account: #<?= $id ?></p>
@@ -24,7 +18,6 @@ use Bank\App\Services\Accounts;
                     <button type="button" class="submitBtn btn btn-secondary btn-lg"><a href="http://bank.meh:8080/acc/">NO</a></button>
                 </div>        
             </div>
-            <?php endif; ?>
         </div>
     </body>
 </html>

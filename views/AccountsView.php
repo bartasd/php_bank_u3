@@ -61,7 +61,12 @@ if($msgOBJ){
                             <td><?= $accounts[$i] -> balance ?> EUR</td>
                             <td class="controls"><a href="http://bank.meh:8080/acc/plus/<?=$accounts[$i] -> id?>">+</a></td>
                             <td class="controls"><a href="http://bank.meh:8080/acc/minus/<?=$accounts[$i] -> id?>">-</a></td>
-                            <td class="controls"><a href="http://bank.meh:8080/acc/delete/<?=$accounts[$i] -> id?>">x</a></td>
+                            <?php if($accounts[$i] -> balance > 0) : ?>
+                                <?php Message::set("You cannot delete account which has funds inside it." , 'error'); ?>
+                                <td class="controls"><a href="http://bank.meh:8080/acc/">x</a></td>
+                            <?php else : ?>
+                                <td class="controls"><a href="http://bank.meh:8080/acc/delete/<?=$accounts[$i] -> id?>">x</a></td>
+                            <?php endif; ?>
                         </tr>
                         <?php endfor; ?>
                     </tbody>
