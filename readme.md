@@ -3,7 +3,7 @@
 
 This application was created as my learning objective.
 Simply to learn php CRUD and stuff.
-This is the second attempt to create PHP BANK CMS, by using OOP programming style.
+This is the second attempt to create PHP BANK CMS, only by using OOP programming style this time.
 
 
 
